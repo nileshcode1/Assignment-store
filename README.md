@@ -256,14 +256,3 @@ This creates an optimized production build in the `dist` folder.
 - ✅ Clean, modular code structure
 - ✅ Modern frontend best practices
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👨‍💻 Author
-
-Built with ❤️ as a frontend development showcase demonstrating modern React, Redux, and TypeScript patterns.
-
----
-
-**Note**: This is a demonstration project built for the Neura assignment. It showcases production-ready code with comprehensive testing, accessibility, and performance optimizations.
