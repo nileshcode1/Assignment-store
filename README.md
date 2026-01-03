@@ -1,8 +1,8 @@
-﻿# NeuraStore - Product Dashboard
+# NeuraStore - Product Dashboard
 
 A modern, scalable product dashboard built with React, Redux Toolkit, and TypeScript. This application demonstrates best practices in frontend development with comprehensive testing, responsive design, and clean architecture.
 
-## ðŸš€ Features
+## 🚀 Features
 
 - **Product Listing**: Browse products in a responsive grid layout
 - **Advanced Search & Filtering**:
@@ -18,7 +18,7 @@ A modern, scalable product dashboard built with React, Redux Toolkit, and TypeSc
 - **State Management**: Redux Toolkit with proper async handling
 - **Testing**: Comprehensive unit and integration tests
 
-## ðŸ›  Tech Stack
+## 🛠️ Tech Stack
 
 - **Frontend Framework**: React 19 with TypeScript
 - **State Management**: Redux Toolkit with RTK Query patterns
@@ -29,26 +29,26 @@ A modern, scalable product dashboard built with React, Redux Toolkit, and TypeSc
 - **Build Tool**: Vite
 - **Code Quality**: ESLint + TypeScript strict mode
 
-## ðŸ“ Project Structure
+## 📁 Project Structure
 
 ```
 src/
-â”œâ”€â”€ components/           # Reusable UI components
-â”‚   â”œâ”€â”€ common/          # Generic components (Button, Input, etc.)
-â”‚   â”œâ”€â”€ layout/          # Layout components (Header, Footer)
-â”‚   â””â”€â”€ products/        # Product-specific components
-â”œâ”€â”€ pages/               # Page components
-â”œâ”€â”€ store/               # Redux store configuration
-â”‚   â”œâ”€â”€ slices/          # Redux slices
-â”‚   â””â”€â”€ selectors.ts     # Memoized selectors
-â”œâ”€â”€ services/            # API services
-â”œâ”€â”€ hooks/               # Custom React hooks
-â”œâ”€â”€ utils/               # Utility functions
-â”œâ”€â”€ types/               # TypeScript type definitions
-â””â”€â”€ test/                # Test utilities and setup
+├── components/           # Reusable UI components
+│   ├── common/          # Generic components (Button, Input, etc.)
+│   ├── layout/          # Layout components (Header, Footer)
+│   └── products/        # Product-specific components
+├── pages/               # Page components
+├── store/               # Redux store configuration
+│   ├── slices/          # Redux slices
+│   └── selectors.ts     # Memoized selectors
+├── services/            # API services
+├── hooks/               # Custom React hooks
+├── utils/               # Utility functions
+├── types/               # TypeScript type definitions
+└── test/                # Test utilities and setup
 ```
 
-## ðŸš¦ Getting Started
+## 🚦 Getting Started
 
 ### Prerequisites
 
@@ -90,7 +90,7 @@ src/
 - `npm run test:coverage` - Run tests with coverage report
 - `npm run lint` - Run ESLint
 
-## ðŸ§ª Testing
+## 🧪 Testing
 
 The application includes comprehensive testing coverage:
 
@@ -121,7 +121,7 @@ npm run test:coverage
 npm run test:ui
 ```
 
-## ðŸŽ¨ Design System
+## 🎨 Design System
 
 The application uses a consistent design system built with Tailwind CSS:
 
@@ -139,7 +139,7 @@ The application uses a consistent design system built with Tailwind CSS:
 - **Inputs**: Focused states with proper accessibility
 - **Loading States**: Skeleton screens and spinners
 
-## ðŸ”§ API Integration
+## 🔧 API Integration
 
 The application integrates with the [Fake Store API](https://fakestoreapi.com):
 
@@ -155,7 +155,7 @@ The application integrates with the [Fake Store API](https://fakestoreapi.com):
 - TypeScript interfaces for all responses
 - Timeout configuration
 
-## ðŸ“± Responsive Design
+## 📱 Responsive Design
 
 The application is fully responsive with breakpoints:
 
@@ -166,11 +166,11 @@ The application is fully responsive with breakpoints:
 
 ### Grid System
 
-- Products: 1 column (mobile) â†’ 2 columns (tablet) â†’ 3 columns (desktop) â†’ 4 columns (large)
+- Products: 1 column (mobile) → 2 columns (tablet) → 3 columns (desktop) → 4 columns (large)
 - Flexible layouts that adapt to screen size
 - Touch-friendly interactions on mobile
 
-## â™¿ Accessibility
+## ♿ Accessibility
 
 - **ARIA Labels**: Proper labeling for screen readers
 - **Keyboard Navigation**: Full keyboard support
@@ -178,7 +178,7 @@ The application is fully responsive with breakpoints:
 - **Color Contrast**: WCAG AA compliant
 - **Semantic HTML**: Proper heading hierarchy and landmarks
 
-## ðŸ”„ State Management
+## 🔄 State Management
 
 Redux Toolkit implementation with:
 
@@ -199,7 +199,7 @@ Redux Toolkit implementation with:
 - Proper error handling
 - Loading state management
 
-## ðŸš€ Performance Optimizations
+## 🚀 Performance Optimizations
 
 - **Code Splitting**: Route-based code splitting
 - **Memoization**: React.memo and useMemo where appropriate
@@ -207,7 +207,7 @@ Redux Toolkit implementation with:
 - **Image Optimization**: Lazy loading and proper sizing
 - **Bundle Analysis**: Optimized build output
 
-## ðŸ”’ Error Handling
+## 🔒 Error Handling
 
 Comprehensive error handling strategy:
 
@@ -216,7 +216,7 @@ Comprehensive error handling strategy:
 - **Invalid Routes**: 404 handling
 - **Component Errors**: Error boundaries (can be added)
 
-## ðŸš¢ Deployment
+## 🚢 Deployment
 
 The application is optimized for deployment on:
 
@@ -229,3 +229,41 @@ The application is optimized for deployment on:
 ```bash
 npm run build
 ```
+
+This creates an optimized production build in the `dist` folder.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📋 Assignment Requirements Checklist
+
+- ✅ React with functional components and hooks
+- ✅ Redux Toolkit for state management
+- ✅ Fake Store API integration
+- ✅ Product listing page with responsive grid
+- ✅ Search & filter functionality (debounced search)
+- ✅ Product detail page with favorites
+- ✅ Favorites page with management
+- ✅ Redux thunks and selectors
+- ✅ Unit tests for Redux slices and components
+- ✅ Integration tests for user workflows
+- ✅ Responsive and accessible design
+- ✅ Clean, modular code structure
+- ✅ Modern frontend best practices
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👨‍💻 Author
+
+Built with ❤️ as a frontend development showcase demonstrating modern React, Redux, and TypeScript patterns.
+
+---
+
+**Note**: This is a demonstration project built for the Neura assignment. It showcases production-ready code with comprehensive testing, accessibility, and performance optimizations.
