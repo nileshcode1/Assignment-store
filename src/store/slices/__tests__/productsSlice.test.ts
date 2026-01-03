@@ -15,7 +15,7 @@ vi.mock('../../../services/api');
 const mockedProductApi = vi.mocked(productApi);
 
 describe('productsSlice', () => {
-  let store: ReturnType<typeof configureStore>;
+  let store: ReturnType<typeof configureStore<{ products: ReturnType<typeof productsReducer> }>>;
 
   beforeEach(() => {
     store = configureStore({

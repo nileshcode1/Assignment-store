@@ -1,6 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
 import type { RootState } from './index';
-import type { Product } from '../types';
 
 export const selectProducts = (state: RootState) => state.products.items;
 export const selectProductsLoading = (state: RootState) => state.products.loading;

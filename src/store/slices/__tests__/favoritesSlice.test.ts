@@ -9,7 +9,7 @@ import favoritesReducer, {
 import { mockProducts } from '../../../test/utils';
 
 describe('favoritesSlice', () => {
-  let store: ReturnType<typeof configureStore>;
+  let store: ReturnType<typeof configureStore<{ favorites: ReturnType<typeof favoritesReducer> }>>;
 
   beforeEach(() => {
     store = configureStore({

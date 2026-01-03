@@ -1,11 +1,10 @@
 import React from 'react';
-import { render, RenderOptions } from '@testing-library/react';
+import { render, type RenderOptions } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
 import productsReducer from '../store/slices/productsSlice';
 import favoritesReducer from '../store/slices/favoritesSlice';
-import { Product } from '../types';
+import type { Product } from '../types';
 
 // Mock products data
 export const mockProducts: Product[] = [
@@ -35,7 +34,7 @@ export const createTestStore = (preloadedState?: any) => {
     reducer: {
       products: productsReducer,
       favorites: favoritesReducer,
-    },
+    } as any,
     preloadedState,
   });
 };

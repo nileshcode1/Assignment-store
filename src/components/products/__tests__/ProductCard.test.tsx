@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { screen, fireEvent } from '@testing-library/react';
 import ProductCard from '../ProductCard';
 import { renderWithProviders, mockProducts } from '../../../test/utils';
@@ -83,7 +83,7 @@ describe('ProductCard', () => {
   });
 
   it('prevents navigation when favorite button is clicked', () => {
-    const { container } = renderWithProviders(
+    renderWithProviders(
       <ProductCard
         product={product}
         onAddToFavorites={mockOnAddToFavorites}
