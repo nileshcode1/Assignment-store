@@ -1,40 +1,46 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
-import type { ProductsState } from '../../types';
-import { productApi } from '../../services/api';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import type { ProductsState } from "../../types";
+import { productApi } from "../../services/api";
 
 export const fetchProducts = createAsyncThunk(
-  'products/fetchProducts',
+  "products/fetchProducts",
   async (_, { rejectWithValue }) => {
     try {
       const products = await productApi.getAllProducts();
       return products;
     } catch (error) {
-      return rejectWithValue(error instanceof Error ? error.message : 'Failed to fetch products');
+      return rejectWithValue(
+        error instanceof Error ? error.message : "Failed to fetch products"
+      );
     }
   }
 );
 
 export const fetchCategories = createAsyncThunk(
-  'products/fetchCategories',
+  "products/fetchCategories",
   async (_, { rejectWithValue }) => {
     try {
       const categories = await productApi.getCategories();
       return categories;
     } catch (error) {
-      return rejectWithValue(error instanceof Error ? error.message : 'Failed to fetch categories');
+      return rejectWithValue(
+        error instanceof Error ? error.message : "Failed to fetch categories"
+      );
     }
   }
 );
 
 export const fetchProductById = createAsyncThunk(
-  'products/fetchProductById',
+  "products/fetchProductById",
   async (id: number, { rejectWithValue }) => {
     try {
       const product = await productApi.getProductById(id);
       return product;
     } catch (error) {
-      return rejectWithValue(error instanceof Error ? error.message : 'Failed to fetch product');
+      return rejectWithValue(
+        error instanceof Error ? error.message : "Failed to fetch product"
+      );
     }
   }
 );
@@ -44,13 +50,13 @@ const initialState: ProductsState = {
   loading: false,
   error: null,
   categories: [],
-  searchTerm: '',
-  selectedCategory: '',
-  sortBy: 'name',
+  searchTerm: "",
+  selectedCategory: "",
+  sortBy: "name",
 };
 
 const productsSlice = createSlice({
-  name: 'products',
+  name: "products",
   initialState,
   reducers: {
     setSearchTerm: (state, action: PayloadAction<string>) => {
@@ -59,13 +65,13 @@ const productsSlice = createSlice({
     setSelectedCategory: (state, action: PayloadAction<string>) => {
       state.selectedCategory = action.payload;
     },
-    setSortBy: (state, action: PayloadAction<ProductsState['sortBy']>) => {
+    setSortBy: (state, action: PayloadAction<ProductsState["sortBy"]>) => {
       state.sortBy = action.payload;
     },
     clearFilters: (state) => {
-      state.searchTerm = '';
-      state.selectedCategory = '';
-      state.sortBy = 'name';
+      state.searchTerm = "";
+      state.selectedCategory = "";
+      state.sortBy = "name";
     },
     clearError: (state) => {
       state.error = null;

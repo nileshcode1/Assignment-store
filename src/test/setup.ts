@@ -1,5 +1,5 @@
-import '@testing-library/jest-dom';
-import { vi } from 'vitest';
+import "@testing-library/jest-dom";
+import { vi } from "vitest";
 
 (globalThis as any).IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -15,7 +15,7 @@ import { vi } from 'vitest';
   unobserve() {}
 };
 
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: vi.fn().mockImplementation((query: string) => ({
     matches: false,
